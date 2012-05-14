@@ -49,8 +49,8 @@
 %%% images
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \pgfdeclareimage[width=0.65\textwidth]{tweetlili}{tweet_lili_2009}
-\pgfdeclareimage[height=0.75\paperheight]{baellebad}{baellebad}
-\pgfdeclareimage[height=0.75\paperheight]{ddr}{DDR_US_1st}
+\pgfdeclareimage[width=0.42\textwidth]{baellebad}{baellebad}
+\pgfdeclareimage[width=0.48\textwidth]{ddr}{DDR_US_1st}
 \pgfdeclareimage[height=0.75\paperheight]{s0matetags}{stratum0-matetags}
 \pgfdeclareimage[height=0.75\paperheight]{s0pony}{stratum0-pony.jpg}
 \pgfdeclareimage[height=0.75\paperheight]{s0reprap}{stratum0-reprap.jpg}
@@ -86,60 +86,35 @@
 
 \subsection{Definition}
 
+\begin{frame}[label=secinvaders]{All your base are belong to us}
+    \begin{figure}
+        \pgfuseimage{s0invaders}
+    \end{figure}
+\end{frame}
+
 \begin{frame}{Ein was?}
     \begin{block}{hackerspaces.org:}
         \begin{quote}
-            Hackerspaces are community-operated physical places, where people
-            can meet and work on their projects.
+            Hackerspaces are community-operated physical places, where 
+            people can meet and work on their projects.
         \end{quote}
     \end{block}
     \pause
     \begin{block}{de.wikipedia.org:}
         \begin{quote}
             Ein Hackerspace (von Hacker und Space, engl. für Raum) oder
-            Hackspace ist ein physischer, häufig offener Raum, in dem sich
-            Hacker und Interessierte treffen und austauschen können.
-            Mitglieder mit Interessen an Wissenschaft, Technologie und
-            digitaler Kunst organisieren sich meist in Vereinen.
+            Hackspace ist ein physischer, häufig offener Raum, in dem 
+            sich Hacker und Interessierte treffen und austauschen 
+            können. Mitglieder mit Interessen an Wissenschaft, 
+            Technologie und digitaler Kunst organisieren sich meist in 
+            Vereinen.
         \end{quote}
     \end{block}
 \end{frame}
 
-\subsection{Bilder}
-
-\begin{frame}[label=secbaellebad]{Bilder}
+\begin{frame}[label=secmap]{Karte}
     \begin{figure}
-        \pgfuseimage{baellebad}
-    \end{figure}
-\end{frame}
-
-\begin{frame}[label=secddr]{Bilder}
-    \begin{figure}
-        \pgfuseimage{ddr}
-    \end{figure}
-\end{frame}
-
-\begin{frame}[label=secmatetags]{Bilder}
-    \begin{figure}
-        \pgfuseimage{s0matetags}
-    \end{figure}
-\end{frame}
-
-\begin{frame}[label=secpony]{Bilder}
-    \begin{figure}
-        \pgfuseimage{s0pony}
-    \end{figure}
-\end{frame}
-
-\begin{frame}[label=secreprap]{Bilder}
-    \begin{figure}
-        \pgfuseimage{s0reprap}
-    \end{figure}
-\end{frame}
-
-\begin{frame}[label=secinvaders]{Bilder}
-    \begin{figure}
-        \pgfuseimage{s0invaders}
+        \pgfuseimage{map}
     \end{figure}
 \end{frame}
 
@@ -163,9 +138,17 @@
     \end{block}
 \end{frame}
 
-\begin{frame}[label=secmap]{Karte}
+\subsection{Bilder}
+
+\begin{frame}[label=secreprap]{Basteln}
     \begin{figure}
-        \pgfuseimage{map}
+        \pgfuseimage{s0reprap}
+    \end{figure}
+\end{frame}
+
+\begin{frame}[label=secmatetags]{Mate}
+    \begin{figure}
+        \pgfuseimage{s0matetags}
     \end{figure}
 \end{frame}
 
@@ -173,39 +156,51 @@
 
 \subsection{past, present, future}
 
-\begin{frame}{Netz39}
-    \begin{quote}
-        According to David Wells in \textbf{The Penguin Dictionary of Curious and
-        Interesting Numbers}, 39 is the smallest mathematically uninteresting
-        number. The book claims that it is also the first number that is
-        simultaneously both interesting and uninteresting, thereby avoiding the
-        paradox. \cite{Wikipedia2010}
-    \end{quote}
+\begin{frame}[label=secpony]{Netz39}
+    \begin{columns}
+        \begin{column}{0.6\textwidth}
+            \begin{quote}
+                According to David Wells in \textbf{The Penguin Dictionary of Curious and Interesting Numbers}, 39 is the smallest mathematically uninteresting number. The book claims that it is also the first number that is simultaneously both interesting and uninteresting, thereby avoiding the paradox. \cite{Wikipedia2010}
+            \end{quote}
+        \end{column}
+        \begin{column}{0.4\textwidth}
+            \begin{figure}
+                \pgfuseimage{s0pony}
+            \end{figure}
+        \end{column}
+    \end{columns}
 \end{frame}
 
-\begin{frame}{gestern, heute, morgen}
-    \begin{block}{past}
-        \begin{itemize}
-            \item FSA 2009
-            \item Twitter, Wiki, Mailingliste
-            \item Stammtische
-        \end{itemize}
-    \end{block}
-    \pause
-    \begin{block}{present}
-        \begin{itemize}
-            \item Verein gegründet
-            \item aktive Suche nach Räumlichkeiten
-            \item Logo bauen, Ideen entwickeln, träumen \dots
-        \end{itemize}
-    \end{block}
-    \pause
-    \begin{block}{future}
-        \begin{itemize}
-            \item Gemeinnützigkeit
-            \item Projekte
-        \end{itemize}
-    \end{block}
+\begin{frame}[label=secddr]{Gestern, heute, morgen \dots}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}<1->
+            \begin{block}{past}
+                \begin{itemize}
+                    \item FSA 2009
+                    \item Twitter, Wiki, Mailingliste
+                    \item Stammtische
+                \end{itemize}
+            \end{block}
+            \begin{block}{present}<2->
+                \begin{itemize}
+                    \item Verein gegründet
+                    \item Räume
+                    \item Logo, Ideen, träumen \dots
+                \end{itemize}
+            \end{block}
+            \begin{block}{future}<3->
+                \begin{itemize}
+                    \item Gemeinnützigkeit
+                    \item Projekte
+                \end{itemize}
+            \end{block}
+        \end{column}
+        \begin{column}{0.5\textwidth}<1->
+            \begin{figure}
+                \pgfuseimage{ddr}
+            \end{figure}
+        \end{column}
+    \end{columns}
 \end{frame}
 
 \subsection{Verein}
@@ -216,37 +211,47 @@
     \end{figure}
 \end{frame}
 
-\begin{frame}{Verein}
-    \begin{block}{How to participate}
-        \begin{itemize}
-            \item neue Mitglieder willkommen
-            \item Mitgliedsbeitrag pro Monat: 30 € oder 8 €
-            \item Mitgliedsantrag online
-            \pause
-            \item Fördermitgliedschaft
-            \item Spenden
-        \end{itemize}
-    \end{block}
-    \pause
-    \begin{block}{What you get}
-        \begin{itemize}
-            \item Raum
-            \item Leute
-            \item Know-How
-        \end{itemize}
-    \end{block}
+\begin{frame}[label=secbaellebad]{Verein}
+    \begin{columns}[b]
+        \begin{column}{0.55\textwidth}
+            \begin{block}{How to participate}<1->
+                \begin{itemize}
+                    \item neue Mitglieder willkommen
+                    \item Mitgliedsantrag online
+                    \item Mitgliedsbeitrag pro Monat: 30 € oder 8 €
+                    \pause
+                    \item Fördermitgliedschaft
+                    \item Spenden
+                \end{itemize}
+            \end{block}
+            \begin{block}{What you get}<3->
+                \begin{itemize}
+                    \item Raum
+                    \item Leute
+                    \item Know-How
+                \end{itemize}
+            \end{block}
+        \end{column}
+        \begin{column}{0.45\textwidth}<4->
+            \begin{figure}
+                \pgfuseimage{baellebad}
+            \end{figure}
+        \end{column}
+    \end{columns}            
 \end{frame}
 
 \section{Kontakt}
 
 \begin{frame}{Kontakt}
-    \begin{description}[Twitter/identi.ca]
-        \item[WWW] \url{http://www.netz39.de/}
-        \item[Twitter/identi.ca] @netz39
-        \item[E-Mail] kontakt@netz39.de
-        \item[Mailingliste] list@netz39.de
-        \item[IRC] \#netz39 auf freenode
-    \end{description}
+    \begin{center}
+        \begin{description}[Twitter/identi.ca]
+            \item[WWW] \url{http://www.netz39.de/}
+            \item[Twitter/identi.ca] @netz39
+            \item[E-Mail] kontakt@netz39.de
+            \item[Mailingliste] list@netz39.de
+            \item[IRC] \#netz39 auf freenode
+        \end{description}
+    \end{center}
 \end{frame}
 
 \appendix
@@ -284,16 +289,16 @@
 \begin{frame}{Bildnachweis}
     \footnotesize
     \begin{description}[Folie XX]
-        \item[Folie \ref{secbaellebad}] Daniel Neumann (@The\_DanielSan), CC-BY-SA 3.0, {\tiny \url{http://bpt2012-1.deplaced.net/}}
-        \item[Folie \ref{secddr}] gemeinfrei, {\tiny \url{https://de.wikipedia.org/w/index.php?title=Datei:DDR\_US\_1st.jpg}}
-        \item[Folie \ref{secmatetags}] Lars Andresen (@larsan), CC-BY-SA 3.0, {\tiny \url{https://stratum0.org/wiki/Datei:20120506-matetags-01.jpg}}
-        \item[Folie \ref{secpony}] Lars Andresen (@larsan), CC-BY-SA 3.0, {\tiny \url{https://stratum0.org/wiki/Datei:20120326-pony.jpg}}
-        \item[Folie \ref{secreprap}] Lars Andresen (@larsan), CC-BY-SA 3.0, {\tiny \url{https://stratum0.org/wiki/Datei:20120506-matetags-06.jpg}}
         \item[Folie \ref{secinvaders}] Roland Hieber (@daniel\_bohrer), CC-BY-SA 3.0, {\tiny \url{https://stratum0.org/wiki/Datei:Space\_Invaders\_fertig\_gro\%C3\%9F.jpg}}
+        \item[Folie \ref{secmap}] hackerspaces.org, {\tiny \url{http://hackerspaces.org/wiki/Europe}}
         \item[Folie \ref{secgeschichte}] @lili\_quasselt auf Twitter,
             {\tiny \url{https://twitter.com/\#!/lili\_quasselt/status/3379026688}}
-        \item[Folie \ref{secmap}] hackerspaces.org, {\tiny \url{http://hackerspaces.org/wiki/Europe}}
+        \item[Folie \ref{secreprap}] Lars Andresen (@larsan), CC-BY-SA 3.0, {\tiny \url{https://stratum0.org/wiki/Datei:20120506-matetags-06.jpg}}
+        \item[Folie \ref{secmatetags}] Lars Andresen (@larsan), CC-BY-SA 3.0, {\tiny \url{https://stratum0.org/wiki/Datei:20120506-matetags-01.jpg}}
+        \item[Folie \ref{secpony}] Lars Andresen (@larsan), CC-BY-SA 3.0, {\tiny \url{https://stratum0.org/wiki/Datei:20120326-pony.jpg}}
+        \item[Folie \ref{secddr}] gemeinfrei, {\tiny \url{https://de.wikipedia.org/w/index.php?title=Datei:DDR\_US\_1st.jpg}}
         \item[Folie \ref{secgruendung}] Andreas Pfohl (@andreaspfohl)
+        \item[Folie \ref{secbaellebad}] Daniel Neumann (@The\_DanielSan), CC-BY-SA 3.0, {\tiny \url{http://bpt2012-1.deplaced.net/}}
     \end{description}
     \normalsize
 \end{frame}
