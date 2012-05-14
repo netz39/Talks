@@ -49,6 +49,12 @@
 %%% images
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \pgfdeclareimage[width=0.65\textwidth]{tweetlili}{tweet_lili_2009}
+\pgfdeclareimage[height=0.75\paperheight]{baellebad}{baellebad}
+\pgfdeclareimage[height=0.75\paperheight]{ddr}{DDR_US_1st}
+\pgfdeclareimage[height=0.75\paperheight]{s0matetags}{stratum0-matetags}
+\pgfdeclareimage[height=0.75\paperheight]{s0pony}{stratum0-pony.jpg}
+\pgfdeclareimage[height=0.75\paperheight]{s0reprap}{stratum0-reprap.jpg}
+\pgfdeclareimage[height=0.75\paperheight]{s0invaders}{stratum0-space-invaders}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% title, author, date
@@ -97,13 +103,47 @@
     \end{block}
 \end{frame}
 
-\begin{frame}{Ein \dots was?}
-    (add pictures here)
+\subsection{Bilder}
+
+\begin{frame}[label=secbaellebad]{Ein \dots was?}
+    \begin{figure}
+        \pgfuseimage{baellebad}
+    \end{figure}
+\end{frame}
+
+\begin{frame}[label=secddr]{Zwei \dots was?}
+    \begin{figure}
+        \pgfuseimage{ddr}
+    \end{figure}
+\end{frame}
+
+\begin{frame}[label=secmatetags]{Drei \dots was?}
+    \begin{figure}
+        \pgfuseimage{s0matetags}
+    \end{figure}
+\end{frame}
+
+\begin{frame}[label=secpony]{Vier \dots was?}
+    \begin{figure}
+        \pgfuseimage{s0pony}
+    \end{figure}
+\end{frame}
+
+\begin{frame}[label=secreprap]{Fünf \dots was?}
+    \begin{figure}
+        \pgfuseimage{s0reprap}
+    \end{figure}
+\end{frame}
+
+\begin{frame}[label=secinvaders]{Sechs \dots was?}
+    \begin{figure}
+        \pgfuseimage{s0invaders}
+    \end{figure}
 \end{frame}
 
 \subsection{Geschichte}
 
-\begin{frame}{Ein bisschen Geschichte}
+\begin{frame}[label=secgeschichte]{Ein bisschen Geschichte}
     \begin{block}{World}
         \begin{itemize}
             \item 80er Jahre: Chaos Computer Club
@@ -202,9 +242,13 @@
     \normalsize
 \end{frame}
 
-\section*{Referenzen}
+\appendix
 
-\begin{frame}{Referenzen}
+\section{Referenzen}
+
+\subsection{Literatur}
+
+\begin{frame}{Literaturverzeichnis}
     \begin{thebibliography}{XX}
         %\beamertemplatebookbibitems
         %\beamertemplatearticlebibitems
@@ -226,6 +270,21 @@
             \newblock \url{https://en.wikipedia.org/w/index.php?title=39\_\%28number\%29\&oldid=344011024}
             \normalsize
     \end{thebibliography}
+\end{frame}
+
+\subsection{Abbildungen}
+
+\begin{frame}{Bildnachweis}
+    \begin{description}[Folie XX]
+        \item[Folie \ref{secbaellebad}] Daniel Neumann (@The\_DanielSan), CC-BY-SA 3.0, \footnotesize\url{http://bpt2012-1.deplaced.net/}\normalsize
+        \item[Folie \ref{secddr}] gemeinfrei, \scriptsize\url{https://de.wikipedia.org/w/index.php?title=Datei:DDR\_US\_1st.jpg}\normalsize
+        \item[Folie \ref{secmatetags}] Lars Andresen (@larsan), CC-BY-SA 3.0, \footnotesize\url{https://stratum0.org/wiki/Datei:20120506-matetags-01.jpg}\normalsize
+        \item[Folie \ref{secpony}] Lars Andresen (@larsan), CC-BY-SA 3.0, \footnotesize\url{https://stratum0.org/wiki/Datei:20120326-pony.jpg}\normalsize
+        \item[Folie \ref{secreprap}] Lars Andresen (@larsan), CC-BY-SA 3.0, \footnotesize\url{https://stratum0.org/wiki/Datei:20120506-matetags-06.jpg}\normalsize
+        \item[Folie \ref{secinvaders}] Roland Hieber (@daniel\_bohrer), CC-BY-SA 3.0, \scriptsize\url{https://stratum0.org/wiki/Datei:Space\_Invaders\_fertig\_gro\%C3\%9F.jpg}\normalsize
+        \item[Folie \ref{secgeschichte}] @lili\_quasselt auf Twitter,
+            \footnotesize\url{https://twitter.com/\#!/lili\_quasselt/status/3379026688}\normalsize
+    \end{description}
 \end{frame}
 
 \end{document}
