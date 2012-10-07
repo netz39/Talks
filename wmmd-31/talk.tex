@@ -1,0 +1,129 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% documentclass and packages
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\RequirePackage{atbegshi}           % workaround for newer PGF versions
+\documentclass[hyperref={pdfpagelabels=false}]{beamer}
+% https://sourceforge.net/tracker/index.php?func=detail&aid=1848912&group_id=92412&atid=600660
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{textcomp}
+\usepackage[ngerman]{babel}
+\usepackage[babel,english=american,german=guillemets]{csquotes}	% french
+%\usepackage{microtype}
+
+% colors for listings
+\definecolor{lightergray}{gray}{.95}
+\definecolor{darkblue}{rgb}{0,0,0.5}
+\definecolor{darkgreen}{rgb}{0,0.5,0}
+\definecolor{darkred}{rgb}{0.5,0,0}
+\definecolor{darkerblue}{rgb}{0,0,0.4}
+\definecolor{darkergreen}{rgb}{0,0.4,0}
+\definecolor{darkerred}{rgb}{0.4,0,0}
+
+\usepackage{listings}
+\lstloadlanguages{HTML,XML}
+\lstset{
+    basicstyle=\ttfamily\small\mdseries,
+    keywordstyle=\bfseries\color{darkblue},
+    identifierstyle=,
+    commentstyle=\color{darkgray},
+    stringstyle=\itshape\color{darkred},
+    frame=none,
+    showstringspaces=false,
+    tabsize=4,
+    backgroundcolor=\color{lightergray},
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% preparations for beamer
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\useinnertheme{default}
+\useoutertheme{infolines}
+%\usecolortheme[rgb={0.28,0.37,0.52}]{structure}
+\usecolortheme[rgb={0.18,0.23,0.33}]{structure}
+%\usecolortheme{beaver}
+\usefonttheme{structurebold}
+
+%%  TODO    Ränder vergrößern für's Café Central
+%           mit setbeamersize text margin left bspw.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% images
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pgfdeclareimage[width=0.65\textwidth]{tweetlili}{tweet_lili_2009}
+\pgfdeclareimage[width=0.42\textwidth]{baellebad}{baellebad}
+\pgfdeclareimage[width=0.48\textwidth]{ddr}{DDR_US_1st}
+\pgfdeclareimage[height=0.75\paperheight]{s0matetags}{stratum0-matetags}
+\pgfdeclareimage[height=0.75\paperheight]{s0pony}{stratum0-pony.jpg}
+\pgfdeclareimage[height=0.75\paperheight]{s0reprap}{stratum0-reprap.jpg}
+\pgfdeclareimage[height=0.75\paperheight]{s0invaders}{stratum0-space-invaders}
+\pgfdeclareimage[height=0.75\paperheight]{gruendung}{gruppenfoto-gruendung}
+\pgfdeclareimage[height=0.75\paperheight]{map}{hackerspaces-map}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% title, author, date
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title[Netz39 e.\,V.]{Netz39 e.\,V.}
+\subtitle{Leibnizstraße 32 -- die ersten Monate}
+\author{Alexander Dahl}
+\institute[netz39.de]{\url{http://www.netz39.de/}}
+\date{2012-10-08}
+\subject{subj}
+\keywords{foo, bar}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\begin{frame}
+	\titlepage
+\end{frame}
+
+%\begin{frame}{Überblick}
+    %\tableofcontents
+%\end{frame}
+
+\section{Hackerspaces}
+
+\subsection{Bilder}
+
+\begin{frame}{Draußen}
+    Bild einfügen!
+\end{frame}
+
+\section{Kontakt}
+
+\begin{frame}{Kontakt}
+    \begin{center}
+        \begin{description}[Twitter/identi.ca]
+            \item[WWW] \url{http://www.netz39.de/}
+            \item[Twitter/identi.ca] @netz39
+            \item[E-Mail] kontakt@netz39.de
+            \item[Mailingliste] list@netz39.de
+            \item[IRC] \#netz39 auf freenode
+        \end{description}
+    \end{center}
+\end{frame}
+
+\appendix
+
+\section{Lizenz}
+
+\begin{frame}{Lizenz}
+    \begin{block}{Bilder}
+        Die Bilder sind unter folgender Creative Commons-Lizenz
+        veröffentlicht: \emph{Namensnennung-Keine kommerzielle
+        Nutzung-Weitergabe unter gleichen Bedingungen 3.0}, (CC-BY-NC-SA
+        3.0). Siehe auch:
+        \url{http://www.lespocky.de/fotos/opensource/netz39/}
+    \end{block}
+    \begin{block}{Folien}
+        Die Folien sind freigegeben unter \emph{Creative Commons
+        Namensnennung-Weitergabe unter gleichen Bedingungen 3.0 Deutschland
+        Lizenz.} (CC-BY-SA 3.0).
+    \end{block}
+\end{frame}
+
+\end{document}
