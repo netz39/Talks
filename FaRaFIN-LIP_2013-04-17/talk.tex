@@ -126,6 +126,7 @@
         \item Terminalemulation zum Zugriff auf Unix-Server der Uni (1991)
         \item hardwarenah für 80386
         \item Grundlage Minix und GNU Compiler
+        \pause
         \item irgendwann \enquote{bemerkte} Torvalds, dass er ein
             Betriebssystem geschrieben hatte …
     \end{itemize}
@@ -149,41 +150,77 @@
 
 \section{Linux}
 
+\subsection{Kernel}
+
+\begin{frame}{Linux ist …}
+    \begin{itemize}
+        \item ein in C geschriebener Betriebssystemkern
+            \begin{itemize}
+                \item Treiber
+                \item Scheduler
+                \item Speicherverwaltung
+                \item Netzwerkstack
+            \end{itemize}
+        \pause
+        \item portabel
+            \begin{itemize}
+                \item verschiedene Architekturen (ARM, Intel, Mips,
+                    Motorola, PowerPC, SPARC, …)
+                \item unterschiedliche Geräte (Smartphone,
+                    Industrierechner, NAS, Router, Server, Desktop,
+                    Supercomputer, Kassensysteme, embedded Devices, …)
+            \end{itemize}
+        \pause
+        \item die landläufige Bezeichnung für den Kernel und das \enquote{drumrum}
+        \pause
+        \item freie Software
+    \end{itemize}
+\end{frame}
+
 \subsection{Distributionen}
 
-\begin{frame}{deb}
+\begin{frame}{Distributionen}
     \begin{itemize}
-        \item Debian
-        \item Ubuntu
-        \item Mint
+        \item Zusammenstellung von Software
+            \begin{itemize}
+                \item Kernel
+                \item Systemprogramme
+                \item Bibliotheken
+                \item Anwendungsprogramme
+            \end{itemize}
+        \pause
+        \item Paketmanager (.deb, .rpm, portage, …)
+        \pause
+        \item Installer
+        \item Dokumentation
+        \item Community und/oder kommerzieller Support
     \end{itemize}
 \end{frame}
 
-\begin{frame}{rpm}
+\begin{frame}{Distributoren}
     \begin{itemize}
-        \item Open SuSE
-        \item Red Hat
-        \item Fedora
-        \item CentOS
+        \item Debianartige: Debian, Ubuntu, Mint
+        \pause
+        \item RPM-basierte: (Open) SuSE, Red Hat, Fedora, CentOS,
+            Mandriva, Mageia
+        \pause
+        \item andere: Slackware, Gentoo, Sabayon, Arch
+        \pause
+        \item embedded: OpenWRT, fli4l, ptxdist, Android
+        \pause
+        \item Live-CD: Grml, Knoppix, Parted Magic, Aptosid
+        \pause
+        \item spezielle Distributionen für Musik, Gamer, Router, …
+        \item siehe auch \url{http://distrowatch.com/}
     \end{itemize}
 \end{frame}
 
-\begin{frame}{other}
-    \begin{itemize}
-        \item Slackware
-        \item Gentoo
-        \item Sabayon
-        \item Arch
-    \end{itemize}
+\subsection{Oberfläche}
+
+\begin{frame}{Desktopumgebung}
 \end{frame}
 
-\begin{frame}{embedded}
-    \begin{itemize}
-        \item OpenWRT
-        \item fli4l
-        \item ptxdist
-        \item Android
-    \end{itemize}
+\begin{frame}{Shell}
 \end{frame}
 
 \section{Kontakt}
