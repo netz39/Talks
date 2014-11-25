@@ -1,0 +1,268 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% documentclass and packages
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\RequirePackage{atbegshi}           % workaround for newer PGF versions
+\documentclass{beamer}
+% https://sourceforge.net/tracker/index.php?func=detail&aid=1848912&group_id=92412&atid=600660
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{textcomp}
+\usepackage[ngerman]{babel}
+\usepackage[babel,english=american,german=guillemets]{csquotes}	% french
+\usepackage{microtype}
+\usepackage[grumpy]{gitinfo}
+
+\usepackage{tikz}
+%\usepackage[european]{circuitikz}
+%\usepackage[locale=DE]{siunitx}
+%\usepackage{tikz-timing}
+
+% colors for listings
+\definecolor{lightergray}{gray}{.95}
+\definecolor{darkblue}{rgb}{0,0,0.5}
+\definecolor{darkgreen}{rgb}{0,0.5,0}
+\definecolor{darkred}{rgb}{0.5,0,0}
+\definecolor{darkerblue}{rgb}{0,0,0.4}
+\definecolor{darkergreen}{rgb}{0,0.4,0}
+\definecolor{darkerred}{rgb}{0.4,0,0}
+
+%\usepackage{listings}
+%\lstloadlanguages{C}
+%\lstset{
+%    basicstyle=\ttfamily\small\mdseries,
+%    keywordstyle=\bfseries\color{darkblue},
+%    identifierstyle=,
+%    commentstyle=\color{darkgray},
+%    stringstyle=\itshape\color{darkred},
+%    frame=none,
+%    showstringspaces=false,
+%    tabsize=4,
+%    backgroundcolor=\color{lightergray},
+%}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% preparations for beamer
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\useinnertheme{default}
+\useoutertheme{infolines}
+%\usecolortheme[rgb={0.28,0.37,0.52}]{structure}
+\usecolortheme[rgb={0.18,0.23,0.33}]{structure}
+%\usecolortheme{beaver}
+\usefonttheme{structurebold}
+
+%%% Ränder vergrößern für's Café Central
+%\setbeamersize{text margin left=1.2cm}
+%\setbeamersize{text margin right=1.2cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% images
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\pgfdeclareimage[height=0.7\paperheight]{durchlassstromgrbl}{durchlassstrom_gr-bl}
+%\pgfdeclareimage[height=0.7\paperheight]{durchlassstromrot}{durchlassstrom_rot}
+
+\titlegraphic{%
+    \input{../logo/netz39-figonly-title.tikz}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% title, author, date
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Digitale Selbstverteidigung}
+%\subtitle{Einführung}
+\author{Alexander Dahl}
+\institute{Netz39 e.\,V.}
+\date{\gitAuthorDate, rev.~\gitAbbrevHash}
+%\subject{subj}
+\keywords{Internet, Überwachung}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\begin{frame}
+	\titlepage
+\end{frame}
+
+\logo{
+    \input{../logo/netz39-figonly-corner.tikz}
+}
+
+%\begin{frame}{Überblick}
+%    \tableofcontents
+%\end{frame}
+
+\section{Digitale Selbstverteidigung}
+
+\begin{frame}
+    \begin{center}
+        inspired by zwobot and digitalcourage~e.\,V.
+
+        \url{https://digitalcourage.de/selbstverteidigung}
+
+        \emph{Crypto ohne Party …}
+    \end{center}
+\end{frame}
+
+\subsection{Warum}
+
+\begin{frame}{Geheimdienste und andere Schnüffler}
+    \begin{itemize}
+        \item NSA
+        \item GCHQ
+        \item BND
+        \pause
+        \item Google
+        \item Facebook
+        \item Yahoo
+        \item Microsoft
+        \item Amazon
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Na und?}
+    \begin{itemize}
+        \item Einbruch
+        \item Privatsphäre
+        \item Freiheit
+        \item Schere im Kopf
+        \item Politische Arbeit
+    \end{itemize}
+\end{frame}
+
+\subsection{E-Mail und Chat}
+
+\begin{frame}{Sicheres E-Mail-Postfach}
+    kleine europäische Anbieter
+
+    \begin{itemize}
+        \item \url{https://posteo.de/}
+        \item \url{https://mailbox.org/}
+        \item \url{https://boerde.de/}
+        \item \url{https://www.in-berlin.de/}
+        \item …
+        \pause
+        \item \url{https://uberspace.de/}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Mailprogramm statt Browser}
+    auf dem Laptop oder Telefon installieren
+
+    \begin{itemize}
+        \item Mozilla Thunderbird
+        \item KMail
+        \item Evolution
+        \item Claws Mail
+        \item mutt
+        \item …
+        \item K9
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Mails verschlüsseln}
+    Keysigningparty anyone? ;-)
+
+    \begin{itemize}
+        \item PGP / OpenPGP / GnuPG
+            \begin{itemize}
+                \item Enigmail
+            \end{itemize}
+        \item S/MIME
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Chat}
+    \begin{itemize}
+        \item Jabber / XMPP
+            \begin{itemize}
+                \item jabber.n39.eu
+                \item yax.im
+                \item \emph{many more!}
+            \end{itemize}
+        \item TextSecure
+    \end{itemize}
+\end{frame}
+
+\subsection{Suchmaschinen}
+
+\begin{frame}{Alternativen zur Google-Suche}
+    Natürlich auch Alternativen zu Yahoo oder Bing … ;-)
+
+    \begin{itemize}
+        \item \url{https://ixquick.com/}
+        \item \url{https://metager.de/}
+        \item \url{https://duckduckgo.com/}
+        \item \url{https://startpage.com/}
+        \item \url{http://www.yandex.com/}
+        \item \url{http://yacy.net/}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Alternativen zu anderen Google-Diensten}
+    \begin{itemize}
+        \item Maps: \url{http://www.openstreetmap.org/}
+        \item YouTube: \url{http://vimeo.com/}
+        \item Play Store: \url{https://f-droid.org/}
+        \item Drive: \url{http://owncloud.org/}
+        \item Google+: \url{https://diasporafoundation.org/}
+    \end{itemize}
+\end{frame}
+
+\subsection{Anonym und sicher surfen}
+
+\begin{frame}{Sicher und anonym surfen}
+    \begin{itemize}
+        \item \url{https://www.eff.org/de/https-everywhere}
+        \item \url{https://www.ghostery.com/}
+        \item \url{https://panopticlick.eff.org/}
+        \item Cookies selektiv erlauben
+        \item Werbung blockieren
+        \item evtl. auch NoScript
+        \item \url{https://www.torproject.org/}
+    \end{itemize}
+\end{frame}
+
+\subsection{Digitale Mündigkeit}
+
+\begin{frame}{Digitale Mündigkeit}
+    \begin{itemize}
+        \item Digitale Handlungen hinterfragen!
+        \item Kostenlose Dienste hinterfragen!
+        \item Eigene Daten unter Kontrolle halten, Cloud-Dienste meiden!
+        \item Freie Software nutzen!
+        \item Vorsichtig sein!
+        \item Nachfragen!
+        \item Aufklären!
+        \item Politischen Einfluss nehmen! Überwachung ablehnen!
+    \end{itemize}
+\end{frame}
+
+\section{Contact}
+
+\begin{frame}{Contact}
+    \begin{center}
+        \begin{description}[Twitter/identi.ca]
+            \item[WWW] \url{http://www.netz39.de/}
+            \item[Twitter/identi.ca] @netz39
+            \item[E-Mail] kontakt@netz39.de
+            \item[Mailingliste] list@netz39.de
+            \item[IRC] \#netz39 on freenode
+        \end{description}
+    \end{center}
+\end{frame}
+
+\appendix
+
+\section{License}
+
+\begin{frame}{License}
+    \begin{block}{Slides and Pictures}
+        This work is licensed under a \emph{Creative Commons
+        Attribution-ShareAlike 3.0 Unported License}, (CC-BY-SA 3.0).
+        Source at: \url{https://github.com/netz39/Talks}
+    \end{block}
+\end{frame}
+
+\end{document}
