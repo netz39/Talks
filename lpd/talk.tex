@@ -1,0 +1,310 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% documentclass and packages
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\RequirePackage{atbegshi}           % workaround for newer PGF versions
+\documentclass{beamer}
+% https://sourceforge.net/tracker/index.php?func=detail&aid=1848912&group_id=92412&atid=600660
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{textcomp}
+\usepackage[ngerman]{babel}
+\usepackage[babel,english=american,german=guillemets]{csquotes}	% french
+\usepackage{microtype}
+
+\usepackage{tikz}
+
+% colors for listings
+\definecolor{lightergray}{gray}{.95}
+\definecolor{darkblue}{rgb}{0,0,0.5}
+\definecolor{darkgreen}{rgb}{0,0.5,0}
+\definecolor{darkred}{rgb}{0.5,0,0}
+\definecolor{darkerblue}{rgb}{0,0,0.4}
+\definecolor{darkergreen}{rgb}{0,0.4,0}
+\definecolor{darkerred}{rgb}{0.4,0,0}
+
+%\usepackage{listings}
+%\lstloadlanguages{HTML,XML}
+%\lstset{
+%    basicstyle=\ttfamily\small\mdseries,
+%    keywordstyle=\bfseries\color{darkblue},
+%    identifierstyle=,
+%    commentstyle=\color{darkgray},
+%    stringstyle=\itshape\color{darkred},
+%    frame=none,
+%    showstringspaces=false,
+%    tabsize=4,
+%    backgroundcolor=\color{lightergray},
+%}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% preparations for beamer
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\useinnertheme{default}
+\useoutertheme{infolines}
+%\usecolortheme[rgb={0.28,0.37,0.52}]{structure}
+\usecolortheme[rgb={0.18,0.23,0.33}]{structure}
+%\usecolortheme{beaver}
+\usefonttheme{structurebold}
+
+%%% Ränder vergrößern für's Café Central
+%\setbeamersize{text margin left=1.2cm}
+%\setbeamersize{text margin right=1.2cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% images
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\pgfdeclareimage[height=0.75\paperheight]{strasse}{strasse}
+%\pgfdeclareimage[height=0.75\paperheight]{arbeitsraum}{arbeitsraum}
+%\pgfdeclareimage[height=0.75\paperheight]{lounge}{lounge}
+%\pgfdeclareimage[height=0.75\paperheight]{mate}{mate}
+%\pgfdeclareimage[height=0.75\paperheight]{regal}{regal}
+%\pgfdeclareimage[height=0.75\paperheight]{werkstatt}{werkstatt}
+
+\titlegraphic{%
+    \input{../logo/netz39-figonly-title.tikz}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% title, author, date
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Linux Presentation Day 2017.1}
+\subtitle{Linux und Freie Software für Anwender}
+\author{Netz39 e.\,V.}
+\institute{\url{http://www.netz39.de/}}
+\date{2017-05-06}
+\subject{subj}
+\keywords{Linux, Installation}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\begin{frame}
+	\titlepage
+\end{frame}
+
+\logo{
+    \input{../logo/netz39-figonly-corner.tikz}
+}
+
+\begin{frame}{Überblick}
+    \tableofcontents
+\end{frame}
+
+\section{Geschichte}
+
+\subsection{GNU is Not Unix}
+
+\begin{frame}{UNIX}
+    \begin{itemize}
+        \item Bell Laboratories, später AT\&T (1969)
+        \item Unixartige Systeme
+            \begin{itemize}
+                \item HP-UX (Hewlett-Packard)
+                \item AIX (IBM)
+                \item IRIX (Silicon Graphics)
+                \item Solaris (Sun/Oracle)
+                \item BSD, Berkeley Software Distribution
+                \item Mac OS X (Apple)
+            \end{itemize}
+        \item Kernel, Dateisystem, Netzwerkstack
+        \item \enquote{alles} ist eine Datei
+        \item Shell
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{GNU und die GPL}
+    \begin{itemize}
+        \item Unix bis Ende der 70er frei verteilt
+        \item Richard Stallman (1983)
+        \item Free Software Foundation (1985)
+        \item POSIX
+        \item gcc, gdb, coreutils, Emacs, …
+        \item General Public License (v1 1989, v2 1991, v3 2007)
+        \item GNU/Hurd (1990)
+        \item Free Software Foundation Europe (2001)
+    \end{itemize}
+\end{frame}
+
+\subsection{Linux}
+
+\begin{frame}{Linus Torvalds}
+    \begin{itemize}
+        \item Student in Helsinki
+        \item Terminalemulation zum Zugriff auf Unix-Server der Uni (1991)
+        \item hardwarenah für 80386
+        \item Grundlage Minix und GNU Compiler
+        \pause
+        \item irgendwann \enquote{bemerkte} Torvalds, dass er ein
+            Betriebssystem geschrieben hatte …
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Die ersten 15 Jahre}
+    \begin{itemize}
+        \item v0.99 unter GPL (1992)
+        \item Verbreitung auf Disketten und mit Dokumentation in \LaTeX
+        \item Nutzung zusammen mit GNU am häufigsten: GNU/Linux
+        \item Entwicklung von Distributionen (Slackware und Debian 1993, RedHat und SuSE 1994)
+        \item v1.0 mit Netzwerk (1994)
+        \item Portierung auf andere Plattformen (1995)
+        \item Multiprozessorunterstützung (1996)
+        \item große Desktopumgebungen KDE (1998) und Gnome (1999)
+        \item Unterstützung großer Firmen wie IBM, Compaq, Oracle
+        \item immer mehr Anwendungen
+        \item Linux-Foundation (2007)
+    \end{itemize}
+\end{frame}
+
+\section{Linux}
+
+\subsection{Kernel}
+
+\begin{frame}{Linux ist …}
+    \begin{itemize}
+        \item ein in C geschriebener Betriebssystemkern
+            \begin{itemize}
+                \item Treiber
+                \item Scheduler
+                \item Speicherverwaltung
+                \item Netzwerkstack
+            \end{itemize}
+        \pause
+        \item portabel
+            \begin{itemize}
+                \item verschiedene Architekturen (ARM, Intel, Mips,
+                    Motorola, PowerPC, SPARC, …)
+                \item unterschiedliche Geräte (Smartphone,
+                    Industrierechner, NAS, Router, Server, Desktop,
+                    Supercomputer, Kassensysteme, embedded Devices, …)
+            \end{itemize}
+        \pause
+        \item die landläufige Bezeichnung für den Kernel und das \enquote{drumrum}
+        \pause
+        \item freie Software
+    \end{itemize}
+\end{frame}
+
+\subsection{Distributionen}
+
+\begin{frame}{Distributionen}
+    \begin{itemize}
+        \item Zusammenstellung von Software
+            \begin{itemize}
+                \item Kernel
+                \item Systemprogramme
+                \item Bibliotheken
+                \item Anwendungsprogramme (Browser, Office, 
+                    Entwicklungsumgebung, Spiele, Multimedia, Chat, …)
+            \end{itemize}
+        \pause
+        \item Paketmanager (.deb, .rpm, portage, …)
+        \pause
+        \item Installer
+        \item Dokumentation
+        \item Community und/oder kommerzieller Support
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Distributoren}
+    \begin{itemize}
+        \item Debianartige: Debian, Ubuntu, Mint
+        \pause
+        \item RPM-basierte: (Open) SuSE, Red Hat, Fedora, CentOS,
+            Mandriva, Mageia
+        \pause
+        \item andere: Slackware, Gentoo, Sabayon, Arch
+        \pause
+        \item embedded: OpenWRT, fli4l, ptxdist, Android
+        \pause
+        \item Live-CD: Grml, Knoppix, Parted Magic, Aptosid
+        \pause
+        \item spezielle Distributionen für Musik, Gamer, Router, …
+        \item siehe auch \url{http://distrowatch.com/}
+    \end{itemize}
+\end{frame}
+
+\subsection{Oberfläche}
+
+\begin{frame}{Grafische Oberfläche}
+    \begin{block}{Desktopumgebung}
+        \begin{itemize}
+            \item KDE (Qt)
+            \item Gnome (GTK)
+            \item Unity
+            \item Xfce  
+            \item LXDE
+        \end{itemize}
+    \end{block}
+    \pause
+    \begin{block}{Window-Manager}
+        \begin{itemize}
+            \item Fluxbox
+            \item Enlightenment
+            \item awesome
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+\begin{frame}{Shell}
+    \begin{itemize}
+        \item Kommandozeileninterpreter
+        \item unerlässlisch für Systeme ohne grafische Oberfläche 
+            (Server, embedded)
+        \item Unix-Philosophie
+        \item Skripte
+        \item Komfortfunktionen (completion, history, job control, …)
+    \end{itemize}
+\end{frame}
+
+\section{Hilfe}
+\begin{frame}{Hilfe}
+    \begin{itemize}
+        \item \texttt{alex@hal9000:\textasciitilde\$ man woman}
+        \item /usr/share/doc
+        \item Wikis
+        \item Mailinglisten
+        \item IRC
+        \item Foren
+        \item regionale Nutzergruppen und Stammtische
+        \item your local Hackerspace …
+    \end{itemize}
+\end{frame}
+
+\section{Kontakt}
+
+\begin{frame}{Kontakt}
+    \begin{center}
+        \begin{description}[XMPP MUC]
+            \item[WWW] \url{http://www.netz39.de/}
+            \item[Twitter] @netz39
+            \item[E-Mail] kontakt@netz39.de
+            \item[Mailingliste] list@netz39.de
+            \item[IRC] \#netz39 auf freenode
+            \item[XMPP MUC] lounge@conference.jabber.n39.eu
+        \end{description}
+    \end{center}
+\end{frame}
+
+\appendix
+
+\section{Lizenz}
+
+\begin{frame}{Lizenz}
+    % \begin{block}{Bilder}
+        % Die Bilder sind unter folgender Creative Commons-Lizenz
+        % veröffentlicht: \emph{Namensnennung-Keine kommerzielle
+        % Nutzung-Weitergabe unter gleichen Bedingungen 3.0}, (CC-BY-NC-SA
+        % 3.0).
+    % \end{block}
+    \begin{block}{Folien}
+        Die Folien sind freigegeben unter \emph{Creative Commons
+        Namensnennung-Weitergabe unter gleichen Bedingungen 3.0
+        Deutschland Lizenz}, (CC-BY-SA 3.0). Download unter:
+        \url{https://github.com/netz39/Talks}
+    \end{block}
+\end{frame}
+
+\end{document}
