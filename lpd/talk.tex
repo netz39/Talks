@@ -71,13 +71,13 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% images
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\pgfdeclareimage[height=0.75\paperheight]{strasse}{strasse}
-%\pgfdeclareimage[height=0.75\paperheight]{arbeitsraum}{arbeitsraum}
-%\pgfdeclareimage[height=0.75\paperheight]{lounge}{lounge}
-%\pgfdeclareimage[height=0.75\paperheight]{mate}{mate}
-%\pgfdeclareimage[height=0.75\paperheight]{regal}{regal}
-%\pgfdeclareimage[height=0.75\paperheight]{werkstatt}{werkstatt}
 \pgfdeclareimage[width=\textwidth]{officecalc1}{screenshot_libreoffice_calc_1.png}
+\pgfdeclareimage[width=\textwidth]{firefox1}{screenshot_firefox_1.png}
+\pgfdeclareimage[width=\textwidth]{inkscape1}{screenshot_inkscape_1.png}
+\pgfdeclareimage[height=0.8\paperheight]{vlc1}{screenshot_vlc_1.png}
+\pgfdeclareimage[height=0.7\paperheight]{gimp1}{screenshot_gimp_1.png}
+\pgfdeclareimage[width=\textwidth]{okular1}{screenshot_okular_1.png}
+\pgfdeclareimage[width=\textwidth]{thunderbird1}{screenshot_thunderbird_1.png}
 
 \titlegraphic{%
     \input{../logo/netz39-figonly-title.tikz}
@@ -328,6 +328,95 @@
             \end{description}
         \end{block}
     }
+\end{frame}
+
+\begin{frame}{Browser}
+    \only<1>
+    {
+        \pgfuseimage{firefox1}
+    }
+    \only<2>
+    {
+        \begin{block}{Frei}
+            \begin{itemize}
+                \item Mozilla Firefox
+                \item Chromium
+                \item Midori
+                \item …
+            \end{itemize}
+        \end{block}
+        \begin{block}{Proprietär}
+            \begin{itemize}
+                \item Google Chrome
+                \item Opera
+            \end{itemize}
+        \end{block}
+        \begin{block}{Alternative für …}
+            \begin{itemize}
+                \item Microsoft Internet Explorer bzw. Edge
+                \item Apple Safari
+            \end{itemize}
+        \end{block}
+    }
+\end{frame}
+
+\begin{frame}{E-Mail}
+    \only<1>
+    {
+        \pgfuseimage{thunderbird1}
+    }
+    \only<2>
+    {
+        \begin{block}{Alternativen}
+            \begin{itemize}
+                \item Mozilla Thunderbird
+                \item mutt
+                \item Claws Mail
+                \item KMail
+                \item Sylpheed
+                \item Evolution
+                \item …
+            \end{itemize}
+        \end{block}
+        \begin{block}{Für …}
+            \begin{itemize}
+                \item Microsoft Outlook
+            \end{itemize}
+        \end{block}
+    }
+\end{frame}
+
+\begin{frame}{Vektorgrafik}
+    \framesubtitle{Inkscape}
+    Alternative zu Adobe Illustrator, Corel Draw, …
+    \pgfuseimage{inkscape1}
+\end{frame}
+
+\begin{frame}{Musik und Video}
+    \framesubtitle{Video Lan Client (VLC)}
+    \pgfuseimage{vlc1}
+\end{frame}
+
+\begin{frame}{Bildbearbeitung}
+    \framesubtitle{GIMP}
+    \pgfuseimage{gimp1}
+\end{frame}
+
+\begin{frame}{PDF}
+    Mehrere Alternativen zu Adobe Reader
+    \pgfuseimage{okular1}
+\end{frame}
+
+\subsection{Spiele}
+
+\begin{frame}{Spielen unter Linux}
+    \begin{itemize}
+        \item Steam
+        \item Minesweeper, Solitair und Co.
+        \item ScummVM
+        \item Wine
+        \item …
+    \end{itemize}
 \end{frame}
 
 \section{Hilfe}
