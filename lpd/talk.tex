@@ -13,7 +13,6 @@
 \usepackage[babel,english=american,german=guillemets]{csquotes}	% french
 \usepackage{microtype}
 \usepackage{tikz}
-\usepackage{ulem}
 
 % colors for listings
 \definecolor{lightergray}{gray}{.95}
@@ -38,8 +37,9 @@
 %    backgroundcolor=\color{lightergray},
 %}
 
-% strong definition (beamer has a special look for \emph and a new
-% definition \alert but that does not fit)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% macros
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \makeatletter
 \newcommand{\strong}[1]{\@strong{#1}}
 \newcommand{\@@strong}[1]{\textbf{\let\@strong\@@@strong#1}}
@@ -57,9 +57,16 @@
 %\usecolortheme{beaver}
 \usefonttheme{structurebold}
 
-%%% Ränder vergrößern für's Café Central
-%\setbeamersize{text margin left=1.2cm}
-%\setbeamersize{text margin right=1.2cm}
+%%% Ränder vergrößern, sieht dann nicht so an den Rand gequetscht aus
+\setbeamersize{text margin left=0.5cm}
+\setbeamersize{text margin right=0.5cm}
+
+%%% let hyperlinks look like hyperlinks
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=darkblue
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% images
@@ -111,6 +118,8 @@
 \end{frame}
 
 \section{Geschichte}
+
+\frame{\tableofcontents[currentsection]}
 
 \subsection{GNU is Not Unix}
 
@@ -170,6 +179,8 @@
 
 \section{Linux}
 
+\frame{\tableofcontents[currentsection]}
+
 \subsection{Kernel}
 
 \begin{frame}{Linux ist …}
@@ -207,7 +218,7 @@
                 \item Kernel
                 \item Systemprogramme
                 \item Bibliotheken
-                \item Anwendungsprogramme (Browser, Office, 
+                \item Anwendungsprogramme (Browser, Office,
                     Entwicklungsumgebung, Spiele, Multimedia, Chat, …)
             \end{itemize}
         \pause
@@ -239,42 +250,23 @@
 
 \section{Freie Software}
 
+\frame{\tableofcontents[currentsection]}
+
 \begin{frame}{Free/Libre and OpenSource Software}
-    \begin{block}{What Do We Want?}
-        \only<1>
-        {
-            \begin{itemize}
-                \item Free beer!!1!
-                \item<2-> Free speech!
-            \end{itemize}
-        }
-
-        \only<2->
-        {
-            \begin{itemize}
-                \item \sout{Free beer!!1!}
-                \item Free speech!
-            \end{itemize}
-        }
+    \begin{block}{Freedoms as Defined by Free Software Foundation (FSF)}
+        \begin{description}
+            \item[Freedom 0] The freedom to run the program for any
+                purpose.
+            \item[Freedom 1] The freedom to study how the program
+                works, and change it to make it do what you wish.
+            \item[Freedom 2] The freedom to redistribute and make
+                copies so you can help your neighbor.
+            \item[Freedom 3] The freedom to improve the program, and
+                release your improvements (and modified versions in
+                general) to the public, so that the whole community
+                benefits.
+        \end{description}
     \end{block}
-
-    \uncover<3->
-    {
-        \begin{block}{Freedoms as Defined by Free Software Foundation (FSF)}
-            \begin{description}
-                \item[Freedom 0] The freedom to run the program for any
-                    purpose.
-                \item[Freedom 1] The freedom to study how the program
-                    works, and change it to make it do what you wish.
-                \item[Freedom 2] The freedom to redistribute and make
-                    copies so you can help your neighbor.
-                \item[Freedom 3] The freedom to improve the program, and
-                    release your improvements (and modified versions in
-                    general) to the public, so that the whole community
-                    benefits.
-            \end{description}
-        \end{block}
-    }
 \end{frame}
 
 \subsection{Oberfläche}
@@ -285,7 +277,7 @@
             \item KDE (Qt)
             \item Gnome (GTK)
             \item Unity
-            \item Xfce  
+            \item Xfce
             \item LXDE
         \end{itemize}
     \end{block}
@@ -302,7 +294,7 @@
 \begin{frame}{Shell}
     \begin{itemize}
         \item Kommandozeileninterpreter
-        \item unerlässlisch für Systeme ohne grafische Oberfläche 
+        \item unerlässlisch für Systeme ohne grafische Oberfläche
             (Server, embedded)
         \item Unix-Philosophie
         \item Skripte
@@ -311,6 +303,9 @@
 \end{frame}
 
 \section{Hilfe}
+
+\frame{\tableofcontents[currentsection]}
+
 \begin{frame}{Hilfe}
     \begin{itemize}
         \item \texttt{alex@hal9000:\textasciitilde\$ man woman}
@@ -344,16 +339,21 @@
 \section{Lizenz}
 
 \begin{frame}{Lizenz}
-    % \begin{block}{Bilder}
-        % Die Bilder sind unter folgender Creative Commons-Lizenz
-        % veröffentlicht: \emph{Namensnennung-Keine kommerzielle
-        % Nutzung-Weitergabe unter gleichen Bedingungen 3.0}, (CC-BY-NC-SA
-        % 3.0).
-    % \end{block}
+    \begin{block}{Bilder}
+        \begin{block}{The Linux Mascot}
+            Penguin Tux by \href{mailto:lewing@isc.tamu.edu}{Larry Ewing}
+            and \href{http://isc.tamu.edu/~lewing/linux/}{The GIMP},
+            vectorized by
+            \href{http://www.home.unix-ag.org/simon/}{Simon Budig},
+            converted to TikZ by
+            \href{http://www.texample.net/weblog/2012/apr/28/tux-tex-tikz/}{Stefan Kottwitz}.
+        \end{block}
+    \end{block}
     \begin{block}{Folien}
-        Die Folien sind freigegeben unter \emph{Creative Commons
-        Namensnennung-Weitergabe unter gleichen Bedingungen 3.0
-        Deutschland Lizenz}, (CC-BY-SA 3.0). Download unter:
+        Die Folien sind freigegeben unter
+        \href{http://creativecommons.org/licenses/by-sa/3.0/de/}{Creative
+        Commons Namensnennung-Weitergabe unter gleichen Bedingungen 3.0
+        Deutschland Lizenz}, (CC\ BY-SA 3.0). Download der Folien unter:
         \url{https://github.com/netz39/Talks}
     \end{block}
 \end{frame}
