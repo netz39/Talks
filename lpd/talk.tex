@@ -77,6 +77,7 @@
 %\pgfdeclareimage[height=0.75\paperheight]{mate}{mate}
 %\pgfdeclareimage[height=0.75\paperheight]{regal}{regal}
 %\pgfdeclareimage[height=0.75\paperheight]{werkstatt}{werkstatt}
+\pgfdeclareimage[width=\textwidth]{officecalc1}{screenshot_libreoffice_calc_1.png}
 
 \titlegraphic{%
     \input{../logo/netz39-figonly-title.tikz}
@@ -237,12 +238,14 @@
         \item RPM-basierte: (Open) SuSE, Red Hat, Fedora, CentOS,
             Mandriva, Mageia
         \pause
-        \item andere: Slackware, Gentoo, Sabayon, Arch
+        \item andere: Slackware, Gentoo, Sabayon, Arch, alpine
         \pause
-        \item embedded: OpenWRT, fli4l, ptxdist, Android
+        \item embedded: OpenWRT/LEDE, fli4l, ptxdist, Android, Yocto,
+            buildroot
         \pause
         \item Live-CD: Grml, Knoppix, Parted Magic, Aptosid
         \pause
+        \item professionelle Distributionen vs. Community (und gemischt)
         \item spezielle Distributionen für Musik, Gamer, Router, …
         \item siehe auch \url{http://distrowatch.com/}
     \end{itemize}
@@ -279,6 +282,7 @@
             \item Unity
             \item Xfce
             \item LXDE
+            \item Cinnamon und Mate
         \end{itemize}
     \end{block}
     \pause
@@ -299,7 +303,31 @@
         \item Unix-Philosophie
         \item Skripte
         \item Komfortfunktionen (completion, history, job control, …)
+        \item viele praktische Tools für alle erdenklichen Aufgaben
     \end{itemize}
+\end{frame}
+
+\subsection{Anwendungen}
+
+\begin{frame}{Office}
+    \framesubtitle{OpenOffice/LibreOffice}
+    \only<1>
+    {
+        \pgfuseimage{officecalc1}
+    }
+    \only<2>
+    {
+        \begin{block}{Alternative für …}
+            \begin{description}[Tabellenkalkulation]
+                \item[Textverarbeitung] \strong{Writer} statt Word
+                \item[Tabellenkalkulation] \strong{Calc} statt Excel
+                \item[Präsentation] \strong{Impress} statt
+                    PowerPoint\footnote{Diese Folien sind mit \LaTeX
+                    Beamer erstellt.}
+                \item[Datenbank] \strong{Base} statt Access
+            \end{description}
+        \end{block}
+    }
 \end{frame}
 
 \section{Hilfe}
