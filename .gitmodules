@@ -1,0 +1,3 @@
+[submodule "advanced-git-workshop"]
+	path = advanced-git-workshop
+	url = git@github.com:netz39/advanced-git-workshop.git
