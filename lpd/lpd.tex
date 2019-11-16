@@ -87,11 +87,11 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% title, author, date
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\title{Linux Presentation Day 2018.2}
+\title{Linux Presentation Day 2019.2}
 \subtitle{Linux und Freie Software für Anwender}
 \author{Netz39 e.\,V.}
 \institute{\url{http://www.netz39.de/}}
-\date{2018-11-10}
+\date{2019-11-16}
 \subject{subj}
 \keywords{Linux, Installation}
 
@@ -117,6 +117,16 @@
     \end{columns}
 \end{frame}
 
+\section{Ablauf}
+
+\begin{frame}{Ablauf}
+    \begin{itemize}
+        \item Präsentation
+        \item Installation
+        \item Hands On
+    \end{itemize}
+\end{frame}
+
 \section{Geschichte}
 
 \frame{\tableofcontents[currentsection]}
@@ -125,7 +135,7 @@
 
 \begin{frame}{UNIX}
     \begin{itemize}
-        \item Bell Laboratories, später AT\&T (1969)
+        \item Bell Laboratories, später AT\&T (USA, 1969)
         \item Workstations, Server, Großrechner
         \item Unixartige Systeme
             \begin{itemize}
@@ -157,7 +167,7 @@
 
 \subsection{Linux}
 
-\begin{frame}{Die ersten 15 Jahre}
+\begin{frame}{Linux -- Die ersten 15 Jahre}
     \begin{itemize}
         \item Linus Torvalds programmiert Terminalemulator zum Zugriff
             auf Unix-Server der Uni Helsinki mit Minix und GNU Compiler
@@ -196,11 +206,11 @@
         \item portabel
             \begin{itemize}
                 \item verschiedene Architekturen (ARM, Intel, Mips,
-                    Motorola, PowerPC, SPARC, …)
+                    Motorola, PowerPC, SPARC, RISC-V, …)
                 \item unterschiedliche Geräte (Smartphone,
                     Industrierechner, NAS, Router, Server,
                     \strong{Desktop}, Supercomputer, Kassensysteme,
-                    embedded Devices, Auto, …)
+                    embedded Devices, Auto, Modems, …)
             \end{itemize}
         \pause
         \item die landläufige Bezeichnung für den Kernel und das \enquote{drumrum}
@@ -215,7 +225,7 @@
     \begin{itemize}
         \item Zusammenstellung von Software
             \begin{itemize}
-                \item Kernel
+                \item Kernel (→ Linux)
                 \item Systemprogramme
                 \item Bibliotheken
                 \item Anwendungsprogramme (Browser, Office,
@@ -268,6 +278,25 @@
         \item professionelle Distributionen vs. Community (und gemischt)
         \item spezielle Distributionen für Musik, Gamer, Router, …
         \item siehe auch \url{http://distrowatch.com/}
+    \end{itemize}
+\end{frame}
+
+\subsection{Installation}
+
+\begin{frame}{Installation}
+    \begin{itemize}
+        \item Distribution aussuchen
+        \item ISO-Image runterladen
+        \item mit .iso-Datei DVD brennen oder auf USB-Stick kopieren
+            \begin{itemize}
+                \item \href{https://tutorials.ubuntu.com/tutorial/tutorial-create-a-usb-stick-on-windows}{Tutorial von Ubuntu (für Windows)}
+                \item leerer Datenträger 4 GB oder größer
+                \item \strong{Image kopieren!} (nicht nur als Datei wie im Explorer)
+                \item auf DVD brennen mit beliebigem Brennprogramm
+                \item auf USB-Stick kopieren bspw. mit \href{https://rufus.ie/}{Rufus}
+            \end{itemize}
+        \item Installationsmedium booten
+        \item Anweisungen auf dem Bildschirm folgen
     \end{itemize}
 \end{frame}
 
@@ -494,7 +523,7 @@
         \item Parameter \texttt{-h} / \texttt{-{}-help}
         \item Wikis
         \item Mailinglisten
-        \item IRC
+        \item Chat (IRC, XMPP, …)
         \item Foren
         \item regionale Nutzergruppen und Stammtische
         \item your local Hackerspace …
